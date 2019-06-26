@@ -1,31 +1,36 @@
 package inherAbstInterf.HomeWork;
 
-public class Woman extends Person {
+public abstract class Woman extends Person {
 
-    private boolean boobs;
+    protected boolean longHair;
 
     public Woman() {
     }
 
-    public Woman(String name, int age, boolean boobs) {
+    public Woman(String name, int age, boolean longHair) {
         super(name, age);
-        this.boobs = boobs;
+        this.longHair = longHair;
     }
 
-    public boolean isBoobs() {
-        return boobs;
+    public boolean isLongHair() {
+        return longHair;
     }
 
-    public void setBoobs(boolean boobs) {
-        this.boobs = boobs;
+    public void setLongHair(boolean longHair) {
+        this.longHair = longHair;
     }
 
     @Override
     public String toString() {
-        return "Woman{" +
+        return "Woman{"  +
                 "name='" + super.getName() + '\'' +
                 ", age=" + super.getAge() +
-                "boobs=" + boobs +
+                "longHair=" + longHair +
                 '}';
     }
+
+    public abstract void doSheHaveInst();
+
+    public abstract void drinkVine();
+
 }

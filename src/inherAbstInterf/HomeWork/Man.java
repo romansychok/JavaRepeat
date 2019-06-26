@@ -1,31 +1,36 @@
 package inherAbstInterf.HomeWork;
 
-public class Man extends Person {
+public abstract class Man extends Person {
 
-        private boolean breard;
+    protected boolean beard;
 
     public Man() {
     }
 
-    public Man(String name, int age, boolean breard) {
+    public Man(String name, int age, boolean beard) {
         super(name, age);
-        this.breard = breard;
+        this.beard = beard;
     }
 
-    public boolean isBreard() {
-        return breard;
+    public boolean isBeard() {
+        return beard;
     }
 
-    public void setBreard(boolean breard) {
-        this.breard = breard;
+    public void setBeard(boolean beard) {
+        this.beard = beard;
     }
 
     @Override
     public String toString() {
-        return "Man{" +
+        return "Man{"  +
                 "name='" + super.getName() + '\'' +
                 ", age=" + super.getAge() +
-                "breard=" + breard +
+                "beard=" + beard +
                 '}';
     }
+
+    public abstract void drinkBear();
+
+    public abstract void smoke();
+
 }
